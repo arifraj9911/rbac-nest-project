@@ -26,7 +26,7 @@ export class UserController {
     return this.userService.createUser(createUserDto);
   }
 
-  @Patch(':/id')
+  @Patch('/:id')
   updateUser(
     @Body() updateUserDto: UpdateUserDto,
     @Param('id', ParseIntPipe) id: number,
@@ -34,13 +34,13 @@ export class UserController {
     return this.userService.updateUser(updateUserDto, id);
   }
 
-  @Get(':/id')
+  @Get('/:id')
   user(@Param('id', ParseIntPipe) id: number) {
     return this.userService.user(id);
   }
 
   @Delete('/:id')
   deleteUser(@Param('id', ParseIntPipe) id: number) {
-    return this.userService.user(id);
+    return this.userService.deleteUser(id);
   }
 }
