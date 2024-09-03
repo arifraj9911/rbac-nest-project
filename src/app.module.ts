@@ -7,6 +7,7 @@ import { Teacher } from './teacher/teacher.entity';
 import { UserModule } from './user/user.module';
 import { User } from './user/entity/user.entity';
 import { AuthModule } from './auth/auth.module';
+import { ProfileModule } from './profile/profile.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     UserModule,
     AuthModule,
+    ProfileModule,
   ],
   controllers: [AppController],
   providers: [AppService],
