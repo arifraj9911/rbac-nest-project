@@ -23,8 +23,8 @@ export class TeacherService {
     return this.teacherRepository.update(id, updateCourseDto);
   }
 
-  getOneCourse(id: number) {
-    return `find course id is: ${id}`;
+  getOneCourse(course_id: number) {
+    return this.teacherRepository.findOne({ where: { course_id } });
   }
 
   deleteCourse(id: number) {
