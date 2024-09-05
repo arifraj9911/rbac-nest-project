@@ -8,6 +8,7 @@ import { UserModule } from './user/user.module';
 import { User } from './user/entity/user.entity';
 import { AuthModule } from './auth/auth.module';
 import { ProfileModule } from './profile/profile.module';
+import { Enrollment } from './enrollment/enroll.entity';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { ProfileModule } from './profile/profile.module';
       username: 'postgres',
       password: 'arif@210505',
       database: 'teacherdb',
-      entities: [Teacher, User],
+      entities: [Teacher, User, Enrollment],
       synchronize: true,
     }),
     UserModule,
